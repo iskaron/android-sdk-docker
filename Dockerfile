@@ -7,7 +7,7 @@ RUN mkdir -p $ANDROID_HOME
 env PATH $ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
 WORKDIR $ANDROID_HOME
 
-RUN apt-get update && apt-get install -y expect && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y expect lib32stdc++6 lib32z1 && rm -rf /var/lib/apt/lists/*
 
 env SDK_VER r24.4.1
 
